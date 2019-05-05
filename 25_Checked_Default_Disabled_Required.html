@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checked_Default_Disabled_Required</title>
+    <style>
+        /* 
+    :checked псевдокласс, который применяется к элементам интерфейса (checkbox или radio)
+    когда они находиться в выбранном состоянии 
+    input:checked + span - найти все span, которые следуют за выбранным input    
+*/
+        
+        input:checked + span {
+            background: #4498ff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* стиль для элемента, который является элементом по умолчанию в группе элементов */
+        input:default {
+            background-color: red;
+        }
+
+        /* disabled - псевдокласс для получения не активных элементов форм */
+        textarea:disabled {
+            background: blue;
+            color: #FFFFFF;
+        }
+
+        /* стиль для элемента который не использует атрибут required */
+        input[type=text]:optional {
+            border: 2px dashed grey;
+        }
+
+        /* стиль для элемента с атрибутом required*/
+        input:required {
+            border: 2px dashed red;
+        }
+
+        /* label для элемента с атрибутом required должен заканчиваться символом '*' */
+        input:required + label:after {
+            content: " *";
+        }
+        
+        /* элементы форм не доступные для редактирования (c атрибутом readonly="readonly")*/
+        input:read-only {
+            opacity: 0.7;
+            border: 1px solid red;
+        }
+
+        /* элементы форм, которые поддерживают редактирование */
+        input:read-write {
+            border: 2px solid green;
+        }
+
+        /* Значение атрибута class начинается с 'test' */
+        div[class^="test"] {
+            background: green;
+        }
+
+        /* значение атрибута class заканчивается текстом test */
+        div[class$="test"] {
+            background: #ffff00;
+        }
+
+        /* атрибут class содержит значение test */
+        [class*="test"] {
+            background: #ffff00;
+        }
+        
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox" name="a1" checked="checked">
+        <span>text</span>
+    </label>
+    <br><br>
+    
+    <form>
+        <input type="reset">
+        <input type="submit">
+        <input type="submit">
+        <input type="submit">
+    </form>
+    <br><br>
+    <form>
+        <textarea disabled cols="100" rows="5">
+        Это заблокированное поле
+        </textarea>
+    </form>
+
+</body>
+</html>

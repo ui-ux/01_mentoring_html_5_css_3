@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gradient http://www.colorzilla.com/gradient-editor/">http://www.colorzilla.com/gradient-editor/</title>
+    <style>
+        div {
+            margin: 5px;
+            height: 50px;
+            padding: 10px;
+            border: 1px #000 solid;
+            text-decoration: underline;
+        }
+
+        #id1 {
+            /* 
+                Градиент распространяется сверху вниз от белого к зеленому. 
+                Используется два градиент стопа
+            */
+            background: -webkit-linear-gradient(top, white, green);
+            background: -moz-linear-gradient(top, white, green);
+            background: -ms-linear-gradient(top, white, green);
+            background: linear-gradient(top, white, green);
+        }
+
+        #id2 {
+            /* 
+                Градиент распространяется слева направо от белого к зеленому. 
+            */
+            background: -webkit-linear-gradient(left, white, green);
+            background: -moz-linear-gradient(left, white, green);
+            background: -ms-linear-gradient(left, white, green);
+            background: linear-gradient(left, white, green);
+        }
+
+        #id3 {
+            /* 
+                Направление градиента задается указанием угла наклона.
+                Значение 0deg и 360deg соответствует вертикальному градиенту.
+                При изменение значения угла вращение градиента происходит по часовой стрелке
+            */
+            background: -webkit-linear-gradient(0deg, white, green);
+            background: -moz-linear-gradient(0deg, white, green);
+            background: -ms-linear-gradient(0deg, white, green);
+            background: linear-gradient(0deg, white, green);
+        }
+
+        #id4 {
+            background: -webkit-linear-gradient(270deg, white, green);
+            background: -o-linear-gradient(270deg, white, green);
+            background: -moz-linear-gradient(270deg, white, green);
+            background: -ms-linear-gradient(270deg, white, green);
+            background: linear-gradient(270deg, white, green);
+        }
+        #id5 {
+            /* 
+                При создание градиента с несколькими сточками перехода цвета используется пара значений - цвет позиция
+            
+                background: linear-gradient(left,           - направление
+                                            white 0%,       - в начале градиента белый цвет
+                                            green 50%,      - средина градиента - зеленый
+                                            black 100%);    - конец - черный
+            */
+            background: -webkit-linear-gradient(left, white 0%, green 50%, black 100%);
+            background: -moz-linear-gradient(left, white 0%, green 50%, black 100%);
+            background: -ms-linear-gradient(left, white 0%, green 50%, black 100%);
+            background: linear-gradient(left, white 0%, green 50%, black 100%);
+        }
+
+        #id6 {
+            background: -webkit-linear-gradient(left, #8F04A8 0%, #7CE700 60%, #FFE100 100%);
+            background: -moz-linear-gradient(left, #8F04A8 0%, #7CE700 60%, #FFE100 100%);
+            background: -ms-linear-gradient(left, #8F04A8 0%, #7CE700 60%, #FFE100 100%);
+            background: linear-gradient(left, #8F04A8 0%, #7CE700 60%, #FFE100 100%);
+        }
+
+        #id7 {
+            /* 
+                radial-gradient - создание радиального градиента 
+            */
+            background: -webkit-radial-gradient(white 20%, black 40%);
+            background: -o-radial-gradient(white 20%, black 40%);
+            background: -moz-radial-gradient(white 20%, black 40%);
+            background: -ms-radial-gradient(white 20%, black 40%);
+            background: radial-gradient(white 20%, black 40%);
+        }
+
+        #id8 {
+            /*
+                возможные типы градиентов - circle, ellipse    
+            */
+            background: -webkit-radial-gradient(ellipse, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: -o-radial-gradient(ellipse, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: -moz-radial-gradient(ellipse, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: -ms-radial-gradient(ellipse, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: radial-gradient(ellipse, #8F04A8 0%, #5D016D 40%, black 60%);
+        }
+
+        #id9 {
+            /*
+                первые два параметра - координаты точки с которой распространяется градиент   
+            */
+            background: -webkit-radial-gradient(20% 10%, circle, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: -o-radial-gradient(20% 10%, circle, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: -moz-radial-gradient(20% 10%, circle, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: -ms-radial-gradient(20% 10%, circle, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: radial-gradient(20% 10%, circle, #8F04A8 0%, #5D016D 40%, black 60%);
+        }
+
+        #id10 {
+            background: -webkit-repeating-linear-gradient(top left, white, white 5px, black 5px, black 10px);
+            background: -moz-repeating-linear-gradient(top left, white, white 5px, black 5px, black 10px);
+            background: -ms-repeating-linear-gradient(top left, white, white 5px, black 5px, black 10px);
+            background: repeating-linear-gradient(top left, white, white 5px, black 5px, black 10px);
+        }
+
+        #id11 {
+            background: -webkit-repeating-radial-gradient(circle, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: -moz-repeating-radial-gradient(circle, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: -ms-repeating-radial-gradient(circle, #8F04A8 0%, #5D016D 40%, black 60%);
+            background: repeating-radial-gradient(circle, #8F04A8 0px, #5D016D 40px, black 60px);
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="id1">linear-gradient(top, white, green)</div>
+    <div id="id2">linear-gradient(left, white, green)</div>
+    
+    <div id="id3">linear-gradient(0deg, white, green)</div>
+    <div id="id4">linear-gradient(270deg, white, green)</div>
+    <div id="id5">
+        <p>linear-gradient(left, white <b>0%</b>, green <b>50%</b>, black <b>100%</b>)</p>
+    </div>
+    <div id="id6">
+        <p>linear-gradient(left, #8F04A8 <b>0%</b>, #7CE700 <b>60%</b>, #FFE100 <b>100%</b>)</p>
+    </div>
+
+    <div id="id7">
+        <p><b>radial-gradient</b>(white 20%, black 40%)</p>
+    </div>
+
+    <div id="id8">
+        <p>radial-gradient(<b>circle</b>, #8F04A8 0%, #5D016D 40%,black 60%)</p>
+    </div>
+
+    <div id="id9">
+        <p>radial-gradient(<b>20% 10%</b>, circle, #8F04A8 0%, #5D016D 40%, black 60%)</p>
+    </div>
+
+    <div id="id10">
+        <p><b>repeating-linear-gradient</b>(top left, white, white 5px, black 5px, black 10px)</p>
+    </div>
+
+    <div id="id11">
+        <p><b>repeating-radial-gradient</b>(circle, #8F04A8 0%, #5D016D 40%, black 60%)</p>
+    </div>
+</body>
+</html>

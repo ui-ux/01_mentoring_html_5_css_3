@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms Validation</title>
+    <style>
+        /* :invalid - псевдокласс для получения элементов форм в которых допущены ошибки */
+        input:invalid {
+            background: #ec3400;
+            font-weight: bold;
+        }
+
+        /* :valid - пслевдокалсс для получения элеметов форм, которые корректно заполнены */
+        input:valid {
+            background: #4498ff;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <p>Адрес сайта</p>
+        <p>
+            <label>
+                <input type="url" required />
+            </label>
+        </p>
+    
+    
+        <p>Адрес электронной почты</p>
+        <p>
+            <label>
+                <input type="email" required />
+            </label>
+        </p>
+    
+        <p>
+            <input type="submit" value="Отправить" />
+        </p>
+    </form>
+</body>
+</html>

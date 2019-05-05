@@ -1,0 +1,68 @@
+<!--
+    HTML5
+    <!DOCTYPE html>
+    <meta charset="utf-8"/>
+    <style></style>
+    <script></script>
+    
+    mark — новый элемент в HTML5
+    abbr - указывает, что последовательность символов является аббревиатурой
+    hidden скрывает содержимое элемента от просмотра но оставляет возможность получать данные с помощью сценариев
+    
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>new html_5</title>
+    
+</head>
+<body>
+    <div>
+        <mark>HTML 5</mark>
+    </div>
+    <br>
+    <div>
+        <abbr title="hyper text markup language">
+            HTML 5
+        </abbr>
+    </div>
+    <br>
+    <div>
+        <!-- <a> - оборачивает несколько элементов -->
+        <a href="#">
+            <h1>HTML5</h1>
+            <img src="img/apple-m.jpg" />
+        </a>
+    </div>
+    <br>
+    <div>
+        <!-- 
+            start устанавливает номер, с которого будет начинаться список
+        -->
+        <ol start="3">
+            <li>text 1</li>
+            <li>text 2</li>
+            <li>text 3</li>
+        </ol>
+
+        <!--
+            reversed применяется для управления нумерацией упорядоченных 
+            списков и отображает список в обратном порядке
+        -->
+        <ol reversed>
+            <!-- Не работает в IE-->
+            <li>text 1</li>
+            <li>text 2</li>
+            <li>text 3</li>
+        </ol>
+    </div>
+    <br>
+    <div>
+        hidden="hidden"
+        <div hidden="hidden">Текст, который не отобразится</div>
+    </div>
+</body>
+</html>

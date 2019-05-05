@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>After</title>
+    <style>
+        h3::after {
+            display: inline-block;
+            content: '___text___';
+        }
+        p::after {
+            display: inline-block;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: tomato;
+        }
+        div::before {
+            display: inline-block;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #324480;
+        }
+    </style>
+</head>
+<body>
+    <h3>text text text</h3>
+    <p>text text text</p>
+    <div>text text text</div>
+</body>
+</html>

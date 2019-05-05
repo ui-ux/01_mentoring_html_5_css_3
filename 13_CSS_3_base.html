@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS_3</title>
+    <style>
+        main > div {
+            margin:10px;
+            border:1px solid #ec3400;
+           /* 
+               "main div" все div в main на каждом вложенности
+               "main > div" все div в main на первом уровне вложенности
+           */
+        }
+        
+        h2 + p {
+            margin:10px;
+            border:1px solid #0527ff;
+            /* 
+                получение p, который сразу следует за h2. 
+            */
+        }
+
+        h2 ~ p {
+            color: red;
+            font-weight: bold;
+            /*            
+                Элементы имеют общего родителья в документе и элемент p находиться за элементом h2
+            */
+        }
+
+        /* правило для всех input */
+        input {
+            margin:10px;
+        }
+
+        /* правило для input с атрибутом required */
+        input[required] {
+            border: 1px solid red;
+        }
+
+        /* правило для input с атрибутом type=submit */
+        input[type=submit] {
+            border: 1px solid #212fff;
+        }
+
+        /* атрибут href начинаеться со значения http:// */
+        a[href^="http://"] {
+            color: red;
+            padding-right: 15px;
+        }
+
+        /* атрибут href заканчивается значением pdf */
+        a[href$=".pdf"] {
+            color: blue;
+            padding-right: 20px;
+        }
+
+        /* атрибут href содержит значение twitter */
+        a[href*="com"] {
+            color: darkorange;
+            padding-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    
+        <div> <!--Данный элемент будет выбран селектором-->
+            Paragraph 1
+            <div>Inner Paragraph 1</div>
+        </div>
+    
+        <div> <!--Данный элемент будет выбран селектором-->
+            Paragraph 2
+            <div>Inner Paragraph 2</div>
+        </div>
+    
+        <div> <!--Данный элемент будет выбран селектором-->
+            Paragraph 3
+            <div>Inner Paragraph 3</div>
+        </div>
+        <div>
+            <h2>Hello</h2>
+            <p>world</p>
+        </div>
+        <div>
+            <h2>Hello</h2>
+            <div>test</div>
+            <p>world</p>
+        </div>
+    </main>
+
+    <form>
+        <label>
+            <input type="text" required="required" />
+        </label>
+        <br />
+        <label>
+            <input type="password" />
+        </label>
+        <br />
+        <input type="submit" />
+    </form>
+
+    <div>
+        <a href="http://aaaaaaaaaaa">Search</a>
+        <br />
+        <a href="aaaaacomaaaaaaa">Some Twitter User</a>
+        <br />
+        <a href="aaaaa.pdf">Manual</a>
+    </div>
+</body>
+</html>

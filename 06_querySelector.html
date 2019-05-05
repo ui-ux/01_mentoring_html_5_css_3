@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>querySelector</title>
+    <script>
+        if (window.addEventListener) window.addEventListener("load", loadHandler, false);
+
+        function loadHandler() {
+            // Получение первого элемента на странице,
+            // который соответствует одному из селекторов указанных в параметрах.
+            // в данном случае возвращаем элемент со значением block в атрибуте class
+
+            var e = document.querySelector(".block");
+            //var e = document.querySelector(".list > li"); /
+
+            e.style.fontSize = "30px";
+            e.style.color = "red";
+        }
+
+        if (window.addEventListener) window.addEventListener("load", loadHandlerAll, false);
+
+        function loadHandlerAll() {
+            var pArray = document.querySelectorAll(".testClass p");
+
+            for (var i = 0; i < pArray.length; i++) {
+                pArray[i].style.border = "solid 1px red";
+                pArray[i].style.margin = "5px";
+                pArray[i].style.padding = "5px";
+            }
+        }
+    </script>
+</head>
+<body>
+    <p id="helloWorld">
+        1
+    </p>
+    <p class="block">
+         2
+    </p>
+    <p>
+         3
+    </p>
+    <p class="block">
+         4
+    </p>
+    <p>
+         5
+    </p>
+    <ul class="list">
+        <li> 1 </li>
+        <li> 2 </li>
+        <li> 3 </li>
+    </ul>
+
+<div>
+    <div class="testClass">
+        <p>
+            First
+        </p>
+        <p>
+            Second
+        </p>
+        <p>
+            Third
+        </p>
+    </div>
+</div>
+</body>
+</html>

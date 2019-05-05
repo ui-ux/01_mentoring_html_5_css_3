@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background-size</title>
+    <style>
+        div {
+            width: 600px;
+            height: 450px;
+            margin: 10px;
+            border: 1px solid black;
+            background: tomato no-repeat;
+        }
+
+        #id1 {
+            background-image: url("img/apple.jpg");
+            background-size: 500px 342px;
+        }
+
+        #id2 {
+            background-image: url("img/apple.jpg");
+            background-size: 50% 50%;
+        }
+
+        #id3 {
+            background-image: url("img/apple.jpg");
+            background-size: contain;
+
+            /* 
+                contain - масштабирование фона таким образом,
+                чтобы картинка увеличивала размер сохраняя пропорции до тех пор,
+                пока ее высота или ширина не будет равна высоте или ширине блока
+            */
+        }
+
+        #id4 {
+            background-image: url("img/apple.jpg");
+            background-size: cover;
+
+            /* 
+                cover - Масштабирование фона таким образом,
+                чтобы картинка увеличивала размеры сохраняя пропорции
+                полностью заполнила весь блок 
+  */
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="id1"></div>
+    <div id="id2"></div>
+
+    <div id="id3"></div>
+    <br />
+    <div id="id4"></div>
+</body>
+</html>

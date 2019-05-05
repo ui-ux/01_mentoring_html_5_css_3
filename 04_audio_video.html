@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>audio_video</title>
+</head>
+<body>
+<!-- 
+    autoplay - сообщает браузеру о том, что необходимо начать воспроизведение аудио, как только будет загружена страница
+    loop - повторно запустить аудио после завершения
+    canplaytype(тип) - возвращает строку, указывающую, может ли браузер воспроизводить данный тип медиафайла
+    currentTime - определяет текущую позицию воспроизведения в секундах
+    duration - содержит длину аудиофайла в секундах
+    play() - функция, начинает воспроизведение с текущей позиции
+    pause() - функция, приостанавливает воспроизведение аудио
+-->
+    <audio id="audio" controls autoplay src="audio_video/Sting%20-%20Fields%20Of%20Gold%20(audilka.com).mp3">
+        Браузер не поддерживает воспроизведение звуковых медиафайлов
+        <br>//html5accessibility.com/
+    </audio>
+
+    <audio controls>
+        <!-- Указание файлов, которые будут использоваться для воспроизведения браузером.
+             Браузер начнет воспроизводить первый файл, формат которого поддерживает. 
+        -->
+        <source src="audio_video/Sting%20-%20Fields%20Of%20Gold%20(audilka.com).mp3">
+<!--        <source src="audio_video/Sting%20-%20Fields%20Of%20Gold%20(audilka.com).mp3">-->
+        <a href="http://html5accessibility.com/">Браузер не поддерживает воспроизведение звуковых медиафайлов</a>
+    </audio>
+
+
+
+<!--<input id="playButton" type="button" value="play" />
+
+<audio id="audioElement">
+    <source src="audio/.mp3">
+    <source src="audio/.ogg">
+</audio>
+
+<script type="text/javascript">
+    document.getElementById("playButton").onclick = playSound;
+
+    function playSound() {
+
+        var music = document.getElementById("audioElement");
+        var button = document.getElementById("playButton");
+
+        // если аудиоплеер на паузе
+        if (music.paused) {
+            music.play(); // начать воспроизведение
+            button.value = "stop";
+        }
+        else { // иначе 
+            music.pause(); // остановить воспроизведение
+            button.value = "play";
+        }
+    }
+</script>-->
+
+
+<!--<audio>
+    <source src="audio/.mp3" />
+    <source src="audio/.ogg" />
+</audio>
+
+<button title="Bocпроизвести  с 30 секунды" onclick="playAt(30);">30 секунда</button>
+
+<script>
+    function playAt(seconds) {
+        var audio = document.getElementsByTagName("audio")[0];
+        audio.currentTime = seconds;
+        audio.play();
+    }
+</script>
+
+<button title="Остановить воспроизведение" onclick="stopAudio();">
+    STOP</button>
+<script>
+
+    function stopAudio() {
+        var audio = document.getElementsByTagName("audio")[0];
+        audio.currentTime = 0;
+        audio.pause();
+    }
+</script>-->
+
+
+<video  id="video" style="border: 2px solid gray; cursor: pointer; width: 200px; height: 200px" controls loop poster="img/apple-m.jpg">
+    <source src="audio_video/Forest.mp4" />
+<!--    <source src="ogg" />
+    <source src=".webm" />-->
+</video>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var videoElem = document.getElementById("video");
+
+        // устанавливаем размер элемента на странце как половина высоты и ширины видеозаписи
+        videoElem.width = videoElem.videoWidth / 2;
+        videoElem.height = videoElem.videoHeight / 2;
+
+        // запускаем видео при наведении курсора
+        videoElem.onmouseover = function () {
+            this.play();
+        };
+
+        // останавливаем видео при выходе курсора
+        videoElem.onmouseout = function () {
+            this.pause();
+        }
+    }
+</script>
+
+<!--<button title="Создать превью" onclick="generatePreview();">Создать превью</button>
+
+<br />
+
+<video id="origVideo" width="640" height="360" style="border: 1px solid grey">
+    <source src=".mp4" />
+    <source src=".ogg" />
+    <source src=".webm" />
+</video>
+
+<br />
+
+<canvas id="previewMed" style="border: 1px solid grey"></canvas>
+<canvas id="previewSm" style="border: 1px solid grey"></canvas>
+
+<script>
+    function generatePreview() {
+        var video = document.getElementById('origVideo');
+
+        // получение контекста для работы с первым canvas
+        var canvas1 = document.getElementById('previewMed');
+        var context1 = canvas1.getContext('2d');
+
+        // получение контекста для работы со вторым canvas
+        var canvas2 = document.getElementById('previewSm');
+        var context2 = canvas2.getContext('2d');
+
+        // задаем размеры для обеих canvas
+        canvas1.width = 320;
+        canvas1.height = 180;
+        canvas2.width = 160;
+        canvas2.height = 90;
+
+        // добавляем обработчик на событие начала воспроизведения видео
+        video.addEventListener('play', function () {
+            drawVideo(this, context1, context2);
+        }, false);
+
+        // заускаем видео
+        video.play();
+    }
+
+    function drawVideo(video, canvas1, canvas2) {
+
+        // если видео на паузе или завершено - не выполняем данную функцию
+        if (video.paused || video.ended) {
+            return false;
+        }
+
+        // рисуем на пером canvas видео размером 320 * 180
+        canvas1.drawImage(video, 0, 0, 320, 180);
+
+        // рисуем на втором canvas видео размером 160 * 90
+        canvas2.drawImage(video, 0, 0, 160, 90);
+
+        // планируем запуск функции drawVideo через 25 миллисекунд передавая текущие значения параметров функции
+        setTimeout(drawVideo, 25, video, canvas1, canvas2);
+    }
+</script>-->
+
+
+<!--<video id="video" style="border: 2px solid gray;" height="200" width="200">
+    <source src="video/vsvideo.mp4" />
+    <source src="video/vsvideo.ogg" />
+    <source src="video/vsvideo.webm" />
+</video>
+
+<br />
+
+<button id="part1Button">
+    1
+</button>
+<button id="part2Button">
+    2
+</button>
+<button id="part3Button">
+    3
+</button>
+
+<button id="playButton">play</button>
+<button id="pauseButton">pause</button>
+
+<script type="text/javascript">
+    window.onload = function () {
+        var v = document.getElementById("video");
+        var part = v.duration / 3;
+
+        document.getElementById("part1Button").onclick = function () {
+            v.currentTime = 0;
+        };
+
+        document.getElementById("part2Button").onclick = function () {
+            v.currentTime = part;
+        };
+
+        document.getElementById("part3Button").onclick = function () {
+            v.currentTime = part * 2;
+        };
+
+        document.getElementById("playButton").onclick = function () {
+            v.play();
+        };
+
+        document.getElementById("pauseButton").onclick = function () {
+            v.pause();
+        };
+    }
+</script>-->
+
+    
+</body>
+</html>

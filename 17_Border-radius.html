@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Border-radius</title>
+    <style>
+        #id1, #id2, #id3, #id4 {
+            border: 2px #000000 solid;
+            padding: 30px;
+            width: 300px;
+            height: 100px;
+            margin: 20px;
+            background-color: #ec3400;
+            color: #FFF;
+            font-weight: bold;
+        }
+
+        #id1 {
+            border-radius: 5px;
+        }
+
+        #id2 {
+            border-top-left-radius: 10px;
+/*            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;*/
+        }
+
+        #id3 {
+            /* border-radius с двумя значениями через слэш позволяет создать эллиптические углы*/
+            border-radius: 10px/20px;
+
+/*            !* первое значение скруглённые верхнего левого угла и нижнего правого, второе значение - верхний правый и нижний левый угол*!
+            border-radius: 10px 30px;
+
+            !* первое значение - верхний левый угол, второе значение - правый верхний и нижний левый, третье значение - правый нижний угол*!
+            border-radius: 10px 20px 30px;
+
+            !* значения задаются по часовой стрелке начиная с левого верхнего угла*!
+            border-radius: 10px 20px 30px 40px;*/
+        }
+
+
+        /* Отображение рисованной рамки вокруг элемента
+           Возможные значения: repeat, round, stretch 
+        */
+        #id5 {
+            border: 15px solid transparent;
+            width: 550px;
+            padding: 10px 20px;
+            border-image: url(img/apple-m.jpg) 30 stretch;
+        }
+        #id6 {
+            border: 15px solid transparent;
+            width: 550px;
+            padding: 10px 20px;
+            border-image: url(img/apple-m.jpg) 30 round;
+        }
+        #id7 {
+            border: 15px solid transparent;
+            width: 550px;
+            padding: 10px 20px;
+            border-image: url(img/apple-m.jpg) 30 repeat;
+        }
+        
+    </style>
+</head>
+<body>
+    <p id='id1'>
+        <span>border-radius</span>
+    </p>
+    
+    <p id='id2'>
+        <span>border-radius</span>
+    </p>
+    
+    <p id='id3'>
+        <span>border-radius</span>
+    </p>
+    
+    <p id='id5'>
+        <span>border-image <br>stretch <br> </span>
+    </p>
+    <p id='id6'>
+        <span>border-image <br>round <br> </span>
+    </p>
+    <p id='id7'>
+        <span>border-image <br>repeat<br> </span>
+    </p>
+</body>
+</html>
