@@ -1,96 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>forms</title>
-</head>
-<body>
-<form action="">
-    <label>
+  </head>
+  <body>
+    <form action="">
+      <label>
         Text label
-        <input type="text" required="required" >
-    </label>
-    <br>
-    <p>
+        <input type="text" required="required" />
+      </label>
+      <br />
+      <p>
         <!--
             email - браузер проводит валидацию корректности введенного email адреса. 
         -->
         <label>
-            E-mail
-            <input type="email" required="required" name="email" title="email" />
+          E-mail
+          <input type="email" required="required" name="email" title="email" />
         </label>
-    </p>
-    <p>
+      </p>
+      <p>
         <!--
             url - браузер проводит валидацию корректности введенного адреса.
         -->
         <label>
-            Сайт
-            <input type="url" required="required" name="website" title="http://..." /></label>
-    </p>
-    <p>
+          Сайт
+          <input
+            type="url"
+            required="required"
+            name="website"
+            title="http://..."
+        /></label>
+      </p>
+      <p>
         <!--
             tel - мобильный браузер будет отображать экранную клавиатуру с цифрами
         -->
         <label>
-            Телефон
-            <input type="tel" required="required" name="phone" /></label>
-    </p>
-    <br>
-    <p>
+          Телефон
+          <input type="tel" required="required" name="phone"
+        /></label>
+      </p>
+      <br />
+      <p>
         <input type="submit" value="Отправить" />
-    </p>
-    <p>
+      </p>
+      <p>
         <label>
-            <input type="number" name="quantity" min="2" max="20" step="2" />
+          <input type="number" name="quantity" min="2" max="20" step="2" />
         </label>
-    </p>
-    <p>
+      </p>
+      <p>
         <label>
-            Range
-            <input type="range"
-                   name="volume"
-                   min="2"
-                   max="10"
-                   step="1"
-                   value="5" />
+          Range
+          <input
+            type="range"
+            name="volume"
+            min="2"
+            max="10"
+            step="1"
+            value="5"
+          />
         </label>
-    </p>
-    <p>
+      </p>
+      <p>
         <label>
-            Цвет шрифта
-            <input type="color" />
+          Цвет шрифта
+          <input type="color" />
         </label>
-    </p>
-    <p>
+      </p>
+      <p>
         <label>
-            <!-- 
+          <!-- 
                 Атрибут autofocus определяет элемент управления, который получит фокус, когда загрузится страница 
                 placeholder используется для того что бы определить подсказку отображаемую в поле ввода до того как пользователь начнет вводить текст
             -->
-            <input type="text" placeholder="autofocus" autofocus="autofocus" />
+          <input type="text" placeholder="autofocus" autofocus="autofocus" />
         </label>
-    </p>
-    <p>
-    <p>
+      </p>
+      <p></p>
+      <p>
         <label>
-            password
-            <!-- autocomplete="off" - атрибут используется для того, чтобы браузер не сохранял данные введенные в поле ввода, для обеспечения безопасности для критических данных.  -->
-            <input type="password" autocomplete="off" /></label>
-    </p>
-    
-    <p>
+          password
+          <!-- autocomplete="off" - атрибут используется для того, чтобы браузер не сохранял данные введенные в поле ввода, для обеспечения безопасности для критических данных.  -->
+          <input type="password" autocomplete="off"
+        /></label>
+      </p>
+
+      <p>
         <label>
-            Телефон
-            <!-- 
+          Телефон
+          <!-- 
                 Атрибут pattern позволяет указать регулярное выражения с помощью, которого будут производиться валидация данных 
                 значение введенное в атрибут title будет использоваться для подсказки если пользователь допустит ошибку.
             -->
-            <input type="tel" name="phone" pattern="\+38\(\d{3}\)\d{3}-\d{2}-\d{2}"
-                   title="+38(063)223-23-23" placeholder="+38(***)***-**-**" />
+          <input
+            type="tel"
+            name="phone"
+            pattern="\+38\(\d{3}\)\d{3}-\d{2}-\d{2}"
+            title="+38(063)223-23-23"
+            placeholder="+38(***)***-**-**"
+          />
         </label>
-    </p>
-</form>
-
-</body>
+      </p>
+    </form>
+  </body>
 </html>

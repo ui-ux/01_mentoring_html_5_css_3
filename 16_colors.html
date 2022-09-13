@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>colors</title>
     <style>
-        div {
-            width: 200px;
-            height: 120px;
-            margin: 10px;
-            float: left;
-            padding: 10px;
-            font-size: 1.5em;
-            background-color: black;
-            color: #ec3400;
-            z-index: 100;
-        }
+      div {
+        width: 200px;
+        height: 120px;
+        margin: 10px;
+        float: left;
+        padding: 10px;
+        font-size: 1.2em;
+        background-color: #ec3400;
+        z-index: 100;
+      }
 
-        #id1 {
-            /* rgba(red, green, blue, alpha) 
-               значение каналов red, green, blue - от 0 до 255
-               значение alpha-канала 0 - полностью прозрачный, 1 - полностью не прозрачный 
-               При использовании rgba прозрачность задаётся только элементу, дочерние элементы остаются без изменений.
-            */
-            background-color: rgba(0, 0, 0, 0.1);
-        }
+      #id2 {
+        /* rgba(red, green, blue, alpha) 
+               channel value - red, green, blue - от 0 до 255
+               alpha channel value 0 - completely transparent, 1 - completely opaque
+               When using rgba, transparency is set only to the element, child elements remain unchanged
+        */
+        color: rgb(4, 1, 0);
+      }
 
-        #id2 {
-            /* opacity - устанавливает прозрачность для элемента и всех дочерних элементов */
-            opacity: 0.1;
-        }
+      #id2 {
+        color: rgb(4, 1, 0, 0.3);
+      }
+
+      #id3 {
+        /* opacity - sets transparency for an element and all child elements */
+        color: rgb(4, 1, 0);
+        opacity: 0.5;
+      }
     </style>
-</head>
-<body>
-    <div id="id1">Прозрачность задана с помощью RGBA</div>
-    <div id="id2">Прозрачность задана с помощью opacity</div>
-</body>
+  </head>
+  <body>
+    <div id="id1">color: rgb(4, 1, 0);</div>
+    <div id="id2">color: rgb(4, 1, 0, 0.3);</div>
+    <div id="id3">
+      color: rgb(4, 1, 0);<br />
+      opacity: 0.5;
+    </div>
+  </body>
 </html>

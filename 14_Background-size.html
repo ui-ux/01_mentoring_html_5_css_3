@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Background-size</title>
     <style>
-        div {
-            width: 600px;
-            height: 450px;
-            margin: 10px;
-            border: 1px solid black;
-            background: tomato no-repeat;
-        }
+      div {
+        width: 600px;
+        height: 450px;
+        margin: 10px;
+        border: 1px solid black;
+        background: tomato no-repeat;
+      }
 
-        #id1 {
-            background-image: url("img/apple.jpg");
-            background-size: 500px 342px;
-        }
+      #id1 {
+        background-image: url("img/apple.jpg");
+        background-size: 500px 342px;
+      }
 
-        #id2 {
-            background-image: url("img/apple.jpg");
-            background-size: 50% 50%;
-        }
+      #id2 {
+        background-image: url("img/apple.jpg");
+        background-size: 50% 50%;
+      }
 
-        #id3 {
-            background-image: url("img/apple.jpg");
-            background-size: contain;
+      #id3 {
+        background-image: url("img/apple.jpg");
+        background-size: contain;
 
-            /* 
-                contain - масштабирование фона таким образом,
-                чтобы картинка увеличивала размер сохраняя пропорции до тех пор,
-                пока ее высота или ширина не будет равна высоте или ширине блока
-            */
-        }
+        /* 
+            contain -   scaling the background in such a way 
+                        that the image increases in size while maintaining proportions 
+                        until its height or width is equal to the height or width of the block
+        */
+      }
 
-        #id4 {
-            background-image: url("img/apple.jpg");
-            background-size: cover;
+      #id4 {
+        background-image: url("img/apple.jpg");
+        background-size: cover;
 
-            /* 
-                cover - Масштабирование фона таким образом,
-                чтобы картинка увеличивала размеры сохраняя пропорции
-                полностью заполнила весь блок 
-  */
-        }
-        
+        /* 
+            over -  scaling the background so that the image increases in size 
+                    while maintaining proportions completely fills the entire block
+        */
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div id="id1"></div>
     <div id="id2"></div>
 
     <div id="id3"></div>
     <br />
     <div id="id4"></div>
-</body>
+  </body>
 </html>

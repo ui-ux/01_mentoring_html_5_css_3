@@ -1,33 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=ZCOOL+KuaiLe" rel="stylesheet">
-    <title>fonts</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonts</title>
     <style>
-        @font-face {
-            font-family: beer-money; /* Имя шрифта */
-            src: url('fonts/beer-money.ttf'); /* Местонахождение шрифта в формате .ttf */
-        }
+      /* Font-size */
 
-        div {
-            font-family: beer-money, sans-serif;
-            font-size: 24px;
-        }
-        
-        p {
-            font-family: 'ZCOOL KuaiLe', cursive;
-        }
-    </style>
-</head>
-<body>
-    <div>
-        font-family: beer-money, sans-serif; <br>
+      html {
         font-size: 24px;
+      }
+
+      .rem-1 {
+        font-size: 1rem;
+      }
+
+      .rem-05 {
+        font-size: 0.5rem;
+      }
+
+      .font-size-36 {
+        font-size: 36px;
+      }
+
+      .em-1 {
+        font-size: 1em;
+      }
+
+      .em-05 {
+        font-size: 0.5em;
+      }
+
+      /*
+             The font-size property specifies the font size.
+             As values, it can take values of absolute units of measure, relative units, size in pixels and percentages.
+             Absolute unit constants:
+                 - xx-small
+                 - x-small
+                 - small
+                 - medium
+                 - large
+                 - x-large
+                 - xx-large
+             The conversion factor between the two sizes is 1.5 from smaller to larger and 0.66 from larger to smaller.
+         */
+      .xx-small {
+        font-size: xx-small;
+      }
+
+      .x-small {
+        font-size: x-small;
+      }
+
+      .small {
+        font-size: small;
+      }
+
+      .medium {
+        font-size: medium;
+      }
+
+      .large {
+        font-size: large;
+      }
+
+      .x-large {
+        font-size: x-large;
+      }
+
+      .xx-large {
+        font-size: xx-large;
+      }
+
+      /*
+             Relative units, sets the font size relative to the parent element.
+             Constants:
+                 - smaller
+                 - larger
+         */
+
+      .smaller {
+        font-size: smaller;
+      }
+
+      .larger {
+        font-size: larger;
+      }
+
+      /* @font-face */
+
+      @font-face {
+        font-family: beer-money; /* Font name */
+        src: url("fonts/beer-money.ttf"); /* Font location in .ttf format */
+      }
+
+      .font-family-beer-money {
+        font-family: beer-money, sans-serif;
+        font-size: 24px;
+      }
+
+      /* font-style */
+      /*
+                 The property allows you to select a style for the text.
+                 The property has the following values:
+                     - italic - makes text italic.
+                     - normal - normal style.
+                     - oblique - oblique font style.
+                 The difference between italic and oblique is that italic adds a slight change to the structure of each letter, while italic text is a slanted version of straight text.
+                 Inherited!
+             */
+
+      .font-style-italic {
+        font-style: italic;
+      }
+
+      /*
+             The property allows the font to be displayed in small caps.
+             Inherited!
+         */
+
+      .font-variant {
+        font-variant: small-caps;
+      }
+
+      /* font-weight */
+      .font-weight-normal {
+        font-weight: normal;
+      }
+
+      .font-weight-bold {
+        font-weight: bold;
+      }
+
+      .font-weight-bolder {
+        font-weight: bolder;
+      }
+
+      .font-weight-lighter {
+        font-weight: lighter;
+      }
+
+      .font-weight-600 {
+        font-weight: 600;
+      }
+
+      .font {
+        font: italic bold 24px Arial;
+      }
+    </style>
+  </head>
+  <body>
+    <div>font-size: 24px;</div>
+    <div class="rem-1">font-size: 1rem;</div>
+    <div>
+      1 div
+      <div>
+        2 div
+        <div class="rem-05">font-size: 0.5rem;</div>
+      </div>
+    </div>
+    <br />
+    <div class="font-size-36">
+      font-size: 36px;
+      <div class="em-1">font-size: 0.5em;</div>
+      <div class="em-05">font-size: 0.5em;</div>
+    </div>
+    <br />
+    <div class="xx-small">font-size: xx-small;</div>
+
+    <div class="x-small">font-size: x-small</div>
+    <div class="small">font-size: small;</div>
+    <div class="medium">font-size: medium;</div>
+    <div class="large">large</div>
+    <div class="x-large">font-size: x-large;</div>
+    <div class="xx-large">font-size: xx-large</div>
+    <br />
+    <div class="font-size-36">
+      font-size: 36px;
+      <div class="smaller">font-size: smaller;</div>
+      <div class="larger">font-size: larger;</div>
     </div>
 
-    <p>
-        font-family: 'ZCOOL KuaiLe', cursive;
-    </p>
-</body>
+    <br />
+    <!-- Font-family -->
+    <div class="font-family-beer-money">
+      font-family: beer-money, sans-serif; <br />
+      font-size: 24px;
+    </div>
+    <br />
+
+    <!-- font-style -->
+    <div class="font-style-italic">font-style: italic;</div>
+    <br />
+
+    <!-- font-variant -->
+    <div class="font-variant">Font-variant</div>
+    <br />
+    <!-- font-weight -->
+
+    <div class="font-weight-normal">font-weight: normal;</div>
+    <div class="font-weight-bold">font-weight: bold;</div>
+    <div class="font-weight-bolder">font-weight: bolder;</div>
+    <div class="font-weight-lighter">font-weight: lighter;</div>
+    <br />
+    <div class="font-weight-600">font-weight: 600;</div>
+    <br />
+    <div class="font">font: italic bold 14px Arial;</div>
+    <br />
+  </body>
 </html>

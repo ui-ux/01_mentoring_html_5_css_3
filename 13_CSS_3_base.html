@@ -1,114 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS_3</title>
     <style>
-        main > div {
-            margin:10px;
-            border:1px solid #ec3400;
-           /* 
-               "main div" все div в main на каждом уровне вложенности
-               "main > div" все div в main на первом уровне вложенности
-           */
-        }
-        
-        h2 + p {
-            margin:10px;
-            border:1px solid #0527ff;
-            /* 
-                получение p, который сразу следует за h2. 
-            */
-        }
+      p {
+        color: red;
+      }
 
-        h2 ~ p {
-            color: red;
-            font-weight: bold;
-            /*            
-                Элементы имеют общего родителья в документе и элемент p находиться за элементом h2
-            */
-        }
+      .test-class {
+        color: rgb(26, 176, 76);
+      }
 
-        /* правило для всех input */
-        input {
-            margin:10px;
-        }
+      #test-id {
+        color: rgb(77, 13, 173);
+      }
 
-        /* правило для input с атрибутом required */
-        input[required] {
-            border: 1px solid red;
-        }
+      .a1 > div {
+        padding: 10px;
+        border: 1px solid #003fec;
+      }
 
-        /* правило для input с атрибутом type=submit */
-        input[type=submit] {
-            border: 1px solid #212fff;
-        }
+      .a2 div {
+        padding: 10px;
+        border: 1px solid #003fec;
+      }
 
-        /* атрибут href начинаеться со значения http:// */
-        a[href^="http://"] {
-            color: red;
-            padding-right: 15px;
-        }
+      h2 + p {
+        margin: 10px;
+        border: 1px solid #0527ff;
+      }
 
-        /* атрибут href заканчивается значением pdf */
-        a[href$=".pdf"] {
-            color: blue;
-            padding-right: 20px;
-        }
+      h2 ~ p {
+        color: red;
+        font-weight: bold;
+      }
 
-        /* атрибут href содержит значение twitter */
-        a[href*="com"] {
-            color: darkorange;
-            padding-right: 15px;
-        }
+      /* for all inputs*/
+      input {
+        margin: 10px;
+      }
+
+      /* rule for 'input' with attribute 'required' */
+      input[required] {
+        border: 1px solid red;
+      }
+
+      /* rule for 'input' with attribute 'type=submit' */
+      input[type="submit"] {
+        border: 1px solid #212fff;
+      }
+
+      /* the 'href' attribute starts with the value 'http://' */
+      a[href^="http://"]
+      {
+        color: red;
+        padding-right: 15px;
+      }
+
+      /* the 'href' attribute ends with the value 'pdf' */
+      a[href$=".pdf"] {
+        color: blue;
+        padding-right: 20px;
+      }
+
+      /* the 'href' attribute contains the value 'com' */
+      a[href*="com"] {
+        color: darkorange;
+        padding-right: 15px;
+      }
+
+      code {
+        color: rgb(211, 122, 122);
+        background-color: #0d1f50;
+        border-radius: 4px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-    
-        <div> <!--Данный элемент будет выбран селектором-->
-            Paragraph 1
-            <div>Inner Paragraph 1</div>
-        </div>
-    
-        <div> <!--Данный элемент будет выбран селектором-->
-            Paragraph 2
-            <div>Inner Paragraph 2</div>
-        </div>
-    
-        <div> <!--Данный элемент будет выбран селектором-->
-            Paragraph 3
-            <div>Inner Paragraph 3</div>
-        </div>
+      <p>styles for the 'p' tag</p>
+      <p class="test-class">class="test-class"</p>
+      <p id="test-id">id="test-id"</p>
+
+      <div class="a1">
+        parent 'div' - <code>.a1 > div</code>
         <div>
-            <h2>Hello</h2>
-            <p>world</p>
+          all 'div's in '.a1' at the first nesting level - level 1
+          <div>level 2</div>
         </div>
+      </div>
+      <br />
+      <div class="a2">
+        parent 'div' - <code>.a2 div</code>
         <div>
-            <h2>Hello</h2>
-            <div>test</div>
-            <p>world</p>
+          all 'div's in '.a1' at each nesting level - level 1
+          <div>
+            level 2
+            <div>level 3</div>
+          </div>
         </div>
+      </div>
+
+      <br />
+      <div>
+        <h2>h2 <code>h2 + p</code></h2>
+        <p>getting 'p' that immediately follows 'h2'</p>
+        <p>p</p>
+      </div>
+      <br />
+      <div>
+        <h2>h2 <code>h2 ~ p</code></h2>
+        <div>div</div>
+        <p>
+          Elements have a common parent in the document and the 'p' element is
+          behind the 'h2' element
+        </p>
+      </div>
+      <br />
     </main>
-
+    <br />
     <form>
-        <label>
-            <input type="text" required="required" />
-        </label>
-        <br />
-        <label>
-            <input type="password" />
-        </label>
-        <br />
-        <input type="submit" />
+      <label>
+        <input type="text" required="required" />
+      </label>
+      <br />
+      <label>
+        <input type="password" />
+      </label>
+      <br />
+      <input type="submit" />
     </form>
-
+    <br />
     <div>
-        <a href="http://aaaaaaaaaaa">Search</a>
-        <br />
-        <a href="aaaaacomaaaaaaa">Some Twitter User</a>
-        <br />
-        <a href="aaaaa.pdf">Manual</a>
+      <a href="http://aaaaaaaaaaa">Link</a>
+      <br />
+      <a href="aaaaacomaaaaaaa">Link</a>
+      <br />
+      <a href="aaaaa.pdf">Link</a>
     </div>
-</body>
+    <br />
+  </body>
 </html>
