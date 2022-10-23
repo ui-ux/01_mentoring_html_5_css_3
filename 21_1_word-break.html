@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>word-break</title>
+    <style>
+      .word-break-break-all {
+        background: tomato;
+        width: 140px;
+        padding: 10px;
+        word-break: break-all;
+        /*
+                 Properties allows you to specify how to do line breaks inside words that do not fit in the width of the back area. css3.
+                 Has the following meanings:
+                     - normal - uses the default line wrapping rules.
+                     - break-all - a break is added automatically so that the word fits into the given block width.
+                     - keep-all - does not allow line breaks in Chinese, Korean and Japanese, for other languages it works like normal.
+             */
+      }
+    </style>
+  </head>
+  <body>
+    <p class="word-break-break-all">Thisissomeveryveryverylong word</p>
+  </body>
+</html>

@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>not</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoclass - not</title>
     <style>
-        /* все параграфы зеленого цвета */
-        p {
-            color: green;
-        }
+      p {
+        color: green;
+      }
 
-        /* :not() псевдокласс для элементов которые не содержат указанный селектор */
-        /* все элементы, которые не являются параграфами - красного цвета*/
-        :not(p) {
-            color: red;
-        }
+      /* :not() pseudo-class for elements that do not contain the specified selector */
+      :not(p) {
+        color: red;
+      }
     </style>
-</head>
-<body>
-    <h1>Заголовк</h1>
-    
-    <p>Параграф</p>
-    <p>Еще один параграф</p>
-    
-    <div>Текст в dive</div>
-    
-    <a href="#" target="_blank">Ссылка</a>
-</body>
+  </head>
+  <body>
+    <h1>header</h1>
+
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+
+    <div>Text in dive</div>
+
+    <a href="#" target="_blank">link</a>
+  </body>
 </html>

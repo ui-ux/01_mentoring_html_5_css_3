@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Empty</title>
     <style>
-        /* :empty - псевдокласс, который представляет пустые элементы - те, которые не содержат дочерних элементов,
-            текста или пробелов
-        */
-        span:empty {
-            background: red;
-            padding: 3px;
-            margin: 7px;
-        }
+      /* :empty is a pseudoclass that represents empty elements - those that do not contain child elements,
+             text or spaces
+         */
+      :empty {
+        background: red;
+      }
 
-        span:empty::before {
-            content: "Пустой элемент";
-            font-weight: bold;
-        }
+      p:empty {
+        border: 3px solid blue;
+      }
+
+      p:empty::before {
+        content: "Empty element";
+        font-weight: bold;
+      }
     </style>
-</head>
-<body>
-    <span></span>
-</body>
+  </head>
+  <body>
+    <p></p>
+    <br />
+    <table border="1">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td></td>
+        <td>6</td>
+      </tr>
+    </table>
+  </body>
 </html>

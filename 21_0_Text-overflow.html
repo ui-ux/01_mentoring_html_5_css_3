@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text-overflow</title>
+    <style>
+      .text-overflow-ellipsis {
+        width: 200px;
+        border: 1px tomato solid;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      /*
+                 The text-overflow property determines the visibility of text in a block if the entire text does not fit within the specified area. css3.
+                 Only works if the overflow property is set. Has the following meanings:
+                     - clip - text is clipped to fit the region.
+                     - ellipsis - the text is cut off and an ellipsis is added to the end of the line.
+    */
+      /*
+                 The overflow property sets the display of the content of the block element if it does not fit entirely and goes beyond the area of the specified dimensions.
+                 Has the following meanings:
+                     - visible - displays all content, even outside the area.
+                     - hidden - only the content that does not go beyond the area is displayed.
+                     - scroll - scrollbars are added.
+                     - auto - scrollbars are added only when needed.
+    */
+      /*
+                The white-space property sets the display of spaces between words.
+                Has the following meanings:
+                    - normal - the test is displayed in the usual way, line breaks are set automatically.
+                    - nowrap - spaces are ignored, line breaks are ignored, and all text is displayed on one line.
+                    - pre - the text is displayed including all spaces and hyphens.
+                    - pre-line - spaces are not taken into account, the text is automatically wrapped to a new line if it does not fit in the specified area.
+                    - pre-wrap - spaces and hyphens in the text will be preserved, but if the line does not fit in the specified area, then the text will automatically wrap to the next line.
+    */
+    </style>
+  </head>
+  <body>
+    <div class="text-overflow-ellipsis">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book.
+    </div>
+  </body>
+</html>

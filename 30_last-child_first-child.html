@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>last-child_first-child</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoclasses last-child_first-child</title>
     <style>
-        /* первый параграф в определенном контейнере */
-        p:first-of-type {
-            background-color: green;
-        }
+      /* first paragraph in a specific container */
+      div :first-of-type {
+        background-color: lime;
+      }
 
-        /* первый дочерний элемент любого div*/
-        div :first-child {
-            background-color: blue;
-        }
+      /* first child of any div */
+      .child :first-child {
+        background-color: blue;
+        color: white;
+      }
 
-        /* последний дочерний элемент любого div*/
-        div :last-child {
-            background-color: red;
-        }
+      /* last child of any div */
+      .child :last-child {
+        background-color: red;
+      }
     </style>
-</head>
-<body>
-    <p>Первый параграф.</p>  <!--p:first-of-type-->
-    <p>Второй параграф.</p>
-    <p>Третий параграф.</p>
-    <p>Четвертый параграф.</p>
-    
+  </head>
+  <body>
+
     <div>
-        <span>Первая строка</span> <!--div :first-child-->
-        <br />
-        <span>Вторая строка</span>
-        <br />
-        <span>Третья строка</span>
-        <br />
-        <span>Четвертая строка</span> <!--div :last-child-->
+        <span>span 1</span><br />
+        <span>span 2</span><br />
+        <em>em</em><br />
+        <b>b</strike><br />
+        <i>i</i><br />
     </div>
-</body>
+    <p class="first-of-type">
+        First paragraph
+    </p>
+    <p>Second paragraph</p>
+    <p>Third paragraph</p>
+    <p>Fourth paragraph</p>
+
+    <div class="child">
+      <span>First span</span>
+      <br />
+      <span>Second span</span>
+      <br />
+      <span>Third span</span>
+      <br />
+      <span>Fourth span</span>
+    </div>
+  </body>
 </html>
